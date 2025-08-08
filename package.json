@@ -1,0 +1,26 @@
+{
+  "name": "iap",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp com Venom.js integrado à OpenAI GPT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuri",
+  "license": "ISC",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "venom",
+    "openai",
+    "chatgpt",
+    "automation"
+  ],
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "openai": "^4.100.0",
+    "puppeteer": "^24.9.0",
+    "venom-bot": "^5.3.0"
+  }
+}
