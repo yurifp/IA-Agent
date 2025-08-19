@@ -3,15 +3,15 @@ const fs = require('fs');
 const { OpenAI } = require('openai');
 const venom = require('venom-bot');
 
-// Lê o prompt mestre do arquivo externo
+
 const promptMestre = fs.readFileSync('./prompt.txt', 'utf8');
 
-// Instancia o OpenAI
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Função para obter resposta da IA
+
 async function obterRespostaDaIA(mensagem) {
   try {
     const resposta = await openai.chat.completions.create({
@@ -28,7 +28,7 @@ async function obterRespostaDaIA(mensagem) {
   }
 }
 
-// Inicializa o Venom
+
 venom.create({
   session: 'gpt-whatsapp',
   headless: false,

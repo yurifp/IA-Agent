@@ -15,11 +15,9 @@ if (fs.existsSync(caminhoCliente)) {
   process.exit(1);
 }
 
-// Cria a estrutura de diretórios
-fs.mkdirSync(caminhoCliente, { recursive: true });
-fs.mkdirSync(path.join(caminhoCliente, 'chrome-data')); // <-- cria pasta de perfil do Chrome
 
-// Cria arquivos básicos
+fs.mkdirSync(caminhoCliente, { recursive: true });
+fs.mkdirSync(path.join(caminhoCliente, 'chrome-data')); 
 fs.writeFileSync(path.join(caminhoCliente, 'prompt.txt'), 'Você é um assistente útil.');
 fs.writeFileSync(path.join(caminhoCliente, '.env'), 'OPENAI_API_KEY=sua-chave-aqui');
 

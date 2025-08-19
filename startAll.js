@@ -10,7 +10,7 @@ fs.readdir(clientsDir, (err, files) => {
     return;
   }
 
-  // Filtra só diretórios
+ 
   const clients = files.filter(file => {
     return fs.statSync(path.join(clientsDir, file)).isDirectory();
   });
